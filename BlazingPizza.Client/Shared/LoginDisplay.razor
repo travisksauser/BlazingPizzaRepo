@@ -1,0 +1,38 @@
+﻿
+<div class="user-info">
+    <AuthorizeView>
+        <Authorizing>
+            <text>Checking...</text>
+        </Authorizing>
+        <Authorized>
+            <img src="img/user.svg" />
+            <div>
+                <span class="username">@context.User.Identity.Name</span>
+                <a class="sign-out" href="user/signout">Sign out</a>
+            </div>
+        </Authorized>
+        <NotAuthorized>
+            <a class="sign-in" href="user/signin" @onclick="@(() => OnClick.InvokeAsync(true))">Sign in</a>
+        </NotAuthorized>
+    </AuthorizeView>
+</div>
+
+@code {
+
+    [Parameter]
+    public EventCallback<bool> OnClick { get; set; }
+    #region
+    @*@inject OrderState OrderState
+      @inject NotifierService NotifierService*@
+    @*<a class="sign-in" @onclick="@(() => OnLoginClick.Invoke(true))">Sign in</a>*@
+    @*<a class="sign-in" @onclick="@ShowSignInOptions">Sign in</a>*@
+    //public event Action<bool> OnLoginClick;
+
+    // NotifyService class communication
+    //protected async void ShowSignInOptions()
+    //{
+    //    OrderState.showingSignInOptions = true;
+    //    await NotifierService.Update();
+    //}
+    #endregion
+}

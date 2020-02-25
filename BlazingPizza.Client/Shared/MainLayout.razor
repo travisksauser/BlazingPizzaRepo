@@ -1,0 +1,43 @@
+﻿@inherits LayoutComponentBase
+@inject OrderState OrderState
+
+<div class="top-bar">
+    <img class="logo" src="img/logo.svg" />
+
+    <NavLink href="" class="nav-tab" Match="NavLinkMatch.All">
+        <img src="img/pizza-slice.svg" />
+        <div>Get Pizza</div>
+    </NavLink>
+    <NavLink href="myorders" class="nav-tab">
+        <img src="img/bike.svg" />
+        <div>My Orders</div>
+    </NavLink>
+
+    <LoginDisplay OnClick="OrderState.ShowSignInOptions" />
+</div>
+
+<div class="content">
+    @Body
+</div>
+
+@if (OrderState.showSignIn)
+{
+    <SignInOptions Exit="OrderState.SignInExitConfigurePizzaDialog" Continue="OrderState.SignInContinueConfigurePizzaDialog" />
+}
+
+@code
+{
+    #region
+    // Cascading Parameter Communication
+    @*<CascadingValue Value="this">*@
+    @*<LoginDisplay @ref="LoginDisplay" OnClick="ShowSignInOptions"/>*@
+    //public LoginDisplay LoginDisplay { get; set; }
+
+    //public bool showSignIn { get; set; } = false;
+
+    //void ShowSignInOptions(bool showingSignInOptions)
+    //{
+    //    showSignIn = showingSignInOptions;
+    //}
+    #endregion
+}
