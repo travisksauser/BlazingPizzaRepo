@@ -12,7 +12,7 @@
             </div>
         </Authorized>
         <NotAuthorized>
-            <a class="sign-in" href="user/signin" @onclick="@(() => OnClick.InvokeAsync(true))">Sign in</a>
+            <a class="sign-in" @onclick="@(() => OnClick.InvokeAsync(true))">Sign in</a>
         </NotAuthorized>
     </AuthorizeView>
 </div>

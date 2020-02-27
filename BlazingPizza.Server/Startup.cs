@@ -34,6 +34,8 @@ namespace BlazingPizza.Server
                     new[] { MediaTypeNames.Application.Octet });
             });
 
+
+
             services
                 .AddAuthentication(options =>
                 {

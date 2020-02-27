@@ -1,3 +1,4 @@
+BlazingComponents.dll
 BlazingPizza.ComponentsLibrary.dll
 BlazingPizza.Shared.dll
 Microsoft.AspNetCore.Authentication.Abstractions.dll
@@ -79,6 +80,7 @@ System.Threading.Tasks.Extensions.dll
 System.Xml.ReaderWriter.dll
 System.Xml.XDocument.dll
 System.Xml.XmlDocument.dll
+BlazingComponents.pdb
 BlazingPizza.Client.pdb
 BlazingPizza.ComponentsLibrary.pdb
 BlazingPizza.Shared.pdb

@@ -2,6 +2,7 @@
 @inject HttpClient HttpClient
 @inject OrderState OrderState
 @inject NotifierService NotifierService
+@inject IJSRuntime JS
 @*@implements IDisposable*@
 
 <div class="main">
@@ -30,7 +31,7 @@
 
             @foreach (var configuredPizza in OrderState.Order.Pizzas)
             {
-                <ConfiguredPizzaItem Pizza="configuredPizza" OnRemoved="@(() => OrderState.RemoveConfiguredPizza(configuredPizza))" />
+                <ConfiguredPizzaItem Pizza="configuredPizza" OnRemoved="@(() => RemovePizza(configuredPizza))" />
             }
         </div>
     }
@@ -48,20 +49,18 @@
     </div>
 </div>
 
-@if (OrderState.showingConfigureDialog)
-{
+
+<TemplatedDialog Show="OrderState.showingConfigureDialog" Exit="OrderState.ExitConfigurePizzaDialog">
     <ConfigurePizzaDialog Pizza="OrderState.configuringPizza"
                           OnCancel="OrderState.CancelConfigurePizzaDialog"
-                          OnConfirm="OrderState.ConfirmConfigurePizzaDialog"
-                          Exit="OrderState.ExitConfigurePizzaDialog"
+                          OnConfirm="OrderState.ConfirmConfigurePizzaDialog"                          
                           Continue="OrderState.ContinueConfigurePizzaDialog" />
-}
+</TemplatedDialog>
+
 
 @code {
 
     List<PizzaSpecial> specials;
-
-    //public bool showSignIn = false;
 
     protected async override Task OnInitializedAsync()
     {
@@ -70,13 +69,22 @@
         //NotifierService.Notify += OnNotify;
     }
 
+    async Task RemovePizza(Pizza configuredPizza)
+    {
+        if (await JS.Confirm($"Remove {configuredPizza.Special.Name} pizza from the order?"))
+        {
+            OrderState.RemoveConfiguredPizza(configuredPizza);
+        }
+    }
+
     #region
+    //public bool showSignIn = false;
     //Cascading Parameter Communication
     //NotifyService class Communication
     //@if (showSignIn)
     @*{
-        <SignInOptions />
-    }*@
+            <SignInOptions />
+        }*@
     //[CascadingParameter] MainLayout MainLayout { get; set; }
     //protected override void OnAfterRender(bool firstRender)
     //{

@@ -2,10 +2,12 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Twitter;
 using Microsoft.AspNetCore.Authentication.Facebook;
+using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace BlazingPizza.Server
 {
@@ -21,18 +23,23 @@ namespace BlazingPizza.Server
                 ? new UserInfo { Name = User.Identity.Name, IsAuthenticated = true }
                 : LoggedOutUser;
         }
-
         [HttpGet("user/signin")]
-        public async Task SignIn(string redirectUri)
+        public async Task SignIn(string redirectUri, string signInService)
         {
+            string[] serviceNames = { "Facebook", "Google", "Twitter" };
+
             if (string.IsNullOrEmpty(redirectUri) || !Url.IsLocalUrl(redirectUri))
             {
                 redirectUri = "/";
             }
+            
+            if (signInService == null || !serviceNames.Any(i => i.Equals(signInService)))
+            {
+                signInService = "Twitter";
+            }
 
-            await HttpContext.ChallengeAsync(
-                FacebookDefaults.AuthenticationScheme,
-                new AuthenticationProperties { RedirectUri = redirectUri });
+            await HttpContext.ChallengeAsync(signInService,
+                            new AuthenticationProperties { RedirectUri = redirectUri });
         }
 
         [HttpGet("user/signout")]

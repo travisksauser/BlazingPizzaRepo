@@ -50,7 +50,7 @@ form {
 .main {
     flex: 1;
     overflow-y: auto;
-    background: linear-gradient(rgba(0,0,0,0) 40%, rgba(0,0,0,0.4) 80%);
+    background: linear-gradient(rgba(0,0,0,0) 40%, rgba(0,0,0,0.5) 85%);
     padding: 1.5rem !important;
 }
 
@@ -181,7 +181,7 @@ form {
         font-weight: 700;
         padding: 0rem 0.7rem;
         border-radius: 4px;
-        background-color: #08af08;
+        background-color: #E33B3B;
         color: white;
         line-height: 2rem;
     }
@@ -451,21 +451,19 @@ form {
     font-size: 1.5rem;
 }
 
-
 /* Sign in modal */
 .loginBtn {
     position: relative;
     width: 100%;
-    margin: 5px 0;
+    margin: 7px 0;
     padding: 12px;
-    border: 1px thin black;
-    text-align: center;
     line-height: 20px;
     white-space: nowrap;
     border-radius: 4px;
     font-size: 17px;
     color: #FFF;
     text-align: center;
+    display: inline-block;
 }
 
     .loginBtn:before {
@@ -505,6 +503,8 @@ form {
     .loginBtn--twitter:focus {
         background: #0db9fb;
         background-image: linear-gradient(#1fcbff, #0db9fb);
+        text-decoration: none;
+        color: #fff;
     }
 
 /* Facebook */
@@ -524,6 +524,8 @@ form {
     .loginBtn--facebook:focus {
         background-color: #5B7BD5;
         background-image: linear-gradient(#5B7BD5, #4864B1);
+        text-decoration: none;
+        color: #fff;
     }
 
 
@@ -541,6 +543,8 @@ form {
     .loginBtn--google:hover,
     .loginBtn--google:focus {
         background: #E74B37;
+        text-decoration: none;
+        color: #fff;
     }
 
 
@@ -549,15 +553,110 @@ form {
     padding: 0.5rem 1rem 1rem 1rem;
 }
 
+/** {
+    box-sizing: border-box;
+}*/
+
+input,
+.btn-signin {
+    width: 100%;
+    padding: 12px;
+    border: 1px thin black;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+}
+
+    input:hover,
+    .btn-signin:hover {
+        opacity: 1;
+    }
+
+    input[type=submit] {
+        background-color: #4CAF50;
+        border: 1px thin black;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+    }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+.signin-col {
+    float: left;
+    width: 50%;
+    margin: auto;
+    padding: 0 50px;
+    margin-top: 6px;
+    flex: 25%;
+}
+
+.signin-row:after {
+    content: "";
+    display: table;
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.signin-vl {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    border: 1px solid #ddd;
+    height: 185px;
+}
+
+.signin-vl-innertext {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    padding: 8px 10px;
+}
+
+.hide-md-lg {
+    display: none;
+}
+
+@media screen and (max-width: 650px) {
+    .signin-col {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .signin-row {
+        flex-direction: column;
+    }
+
+    .signin-vl {
+        display: none;
+    }
+
+    .hide-md-lg {
+        display: block;
+        text-align: center;
+    }
+}
+
 .signin-close {
     position: relative;
-    right: -18px;
-    top: -6px;
+    right: -27px;
+    top: -8px;
     width: 32px;
-    height: 32px;
-    opacity: 0.3;
+    height: 20px;
+    opacity: 0.6;
     z-index: 2000;
     display: flex;
+    cursor: pointer;
 }
 
     .signin-close:hover {
@@ -568,7 +667,7 @@ form {
         left: 15px;
         content: ' ';
         height: 30px;
-        width: 2px;
+        width: 1px;
         background-color: #fff;
     }
 
@@ -587,7 +686,6 @@ form {
     .btn-close-cnt h2 {
         flex: 1;
     }
-
 
 .delete-topping {
     background: none;
@@ -617,7 +715,7 @@ form {
 /* Orders page button */
 .fixed-button {
     position: absolute;
-    right: 55px;
+    right: 24em;
     top: 175px;
     padding: 0.5em 1em;
 }

@@ -924,11 +924,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\blazor-workshop-master\\save-points\\00-Starting-point\\BlazingPizza.ComponentsLibrary\\BlazingPizza.ComponentsLibrary.csproj",
+      "projectUniqueName": "C:\\dev\\blazor-workshop-master\\save-points\\BlazingPizza\\BlazingPizza.ComponentsLibrary\\BlazingPizza.ComponentsLibrary.csproj",
       "projectName": "BlazingPizza.ComponentsLibrary",
-      "projectPath": "C:\\dev\\blazor-workshop-master\\save-points\\00-Starting-point\\BlazingPizza.ComponentsLibrary\\BlazingPizza.ComponentsLibrary.csproj",
+      "projectPath": "C:\\dev\\blazor-workshop-master\\save-points\\BlazingPizza\\BlazingPizza.ComponentsLibrary\\BlazingPizza.ComponentsLibrary.csproj",
       "packagesPath": "C:\\Users\\TravisSauser\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\blazor-workshop-master\\save-points\\00-Starting-point\\BlazingPizza.ComponentsLibrary\\obj\\",
+      "outputPath": "C:\\dev\\blazor-workshop-master\\save-points\\BlazingPizza\\BlazingPizza.ComponentsLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

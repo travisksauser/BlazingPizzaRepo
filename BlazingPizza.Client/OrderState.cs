@@ -88,5 +88,11 @@ namespace BlazingPizza.Client
             Order.Pizzas.Remove(pizza);
         }
         #endregion
+
+        // save and reload orders when navigated away on sign in
+        public void ReplaceOrder(Order order)
+        {
+            Order = order;
+        }
     }
 }

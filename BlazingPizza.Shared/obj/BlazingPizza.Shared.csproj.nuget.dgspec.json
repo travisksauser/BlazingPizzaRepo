@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\blazor-workshop-master\\save-points\\00-Starting-point\\BlazingPizza.Shared\\BlazingPizza.Shared.csproj": {}
+    "C:\\dev\\blazor-workshop-master\\save-points\\BlazingPizza\\BlazingPizza.Shared\\BlazingPizza.Shared.csproj": {}
   },
   "projects": {
-    "C:\\dev\\blazor-workshop-master\\save-points\\00-Starting-point\\BlazingPizza.ComponentsLibrary\\BlazingPizza.ComponentsLibrary.csproj": {
+    "C:\\dev\\blazor-workshop-master\\save-points\\BlazingPizza\\BlazingPizza.ComponentsLibrary\\BlazingPizza.ComponentsLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\blazor-workshop-master\\save-points\\00-Starting-point\\BlazingPizza.ComponentsLibrary\\BlazingPizza.ComponentsLibrary.csproj",
+        "projectUniqueName": "C:\\dev\\blazor-workshop-master\\save-points\\BlazingPizza\\BlazingPizza.ComponentsLibrary\\BlazingPizza.ComponentsLibrary.csproj",
         "projectName": "BlazingPizza.ComponentsLibrary",
-        "projectPath": "C:\\dev\\blazor-workshop-master\\save-points\\00-Starting-point\\BlazingPizza.ComponentsLibrary\\BlazingPizza.ComponentsLibrary.csproj",
+        "projectPath": "C:\\dev\\blazor-workshop-master\\save-points\\BlazingPizza\\BlazingPizza.ComponentsLibrary\\BlazingPizza.ComponentsLibrary.csproj",
         "packagesPath": "C:\\Users\\TravisSauser\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\blazor-workshop-master\\save-points\\00-Starting-point\\BlazingPizza.ComponentsLibrary\\obj\\",
+        "outputPath": "C:\\dev\\blazor-workshop-master\\save-points\\BlazingPizza\\BlazingPizza.ComponentsLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -73,14 +73,14 @@
         }
       }
     },
-    "C:\\dev\\blazor-workshop-master\\save-points\\00-Starting-point\\BlazingPizza.Shared\\BlazingPizza.Shared.csproj": {
+    "C:\\dev\\blazor-workshop-master\\save-points\\BlazingPizza\\BlazingPizza.Shared\\BlazingPizza.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\blazor-workshop-master\\save-points\\00-Starting-point\\BlazingPizza.Shared\\BlazingPizza.Shared.csproj",
+        "projectUniqueName": "C:\\dev\\blazor-workshop-master\\save-points\\BlazingPizza\\BlazingPizza.Shared\\BlazingPizza.Shared.csproj",
         "projectName": "BlazingPizza.Shared",
-        "projectPath": "C:\\dev\\blazor-workshop-master\\save-points\\00-Starting-point\\BlazingPizza.Shared\\BlazingPizza.Shared.csproj",
+        "projectPath": "C:\\dev\\blazor-workshop-master\\save-points\\BlazingPizza\\BlazingPizza.Shared\\BlazingPizza.Shared.csproj",
         "packagesPath": "C:\\Users\\TravisSauser\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\blazor-workshop-master\\save-points\\00-Starting-point\\BlazingPizza.Shared\\obj\\",
+        "outputPath": "C:\\dev\\blazor-workshop-master\\save-points\\BlazingPizza\\BlazingPizza.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -102,8 +102,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\dev\\blazor-workshop-master\\save-points\\00-Starting-point\\BlazingPizza.ComponentsLibrary\\BlazingPizza.ComponentsLibrary.csproj": {
-                "projectPath": "C:\\dev\\blazor-workshop-master\\save-points\\00-Starting-point\\BlazingPizza.ComponentsLibrary\\BlazingPizza.ComponentsLibrary.csproj"
+              "C:\\dev\\blazor-workshop-master\\save-points\\BlazingPizza\\BlazingPizza.ComponentsLibrary\\BlazingPizza.ComponentsLibrary.csproj": {
+                "projectPath": "C:\\dev\\blazor-workshop-master\\save-points\\BlazingPizza\\BlazingPizza.ComponentsLibrary\\BlazingPizza.ComponentsLibrary.csproj"
               }
             }
           }

@@ -1,139 +1,41 @@
-﻿<div class="dialog-container" @onclick="@Exit">
-    <div class="dialog" @onclick="@Continue">
-        <div class="dialog-title btn-close-cnt" @onclick="@Continue">
-            
-            <h2>Sign in</h2>
-            <div>
-                <a class="signin-close" @onclick="@Exit"/>
-            </div>
+﻿
+<div class="dialog-title btn-close-cnt" @onclick="@Continue">
 
-        </div>
-        <form class="dialog-signin-body">            
-            <div class="signin-row">
-                <div class="signin-vl">
-                    <span class="signin-vl-innertext">or</span>
-                </div>
-
-                <div class="signin-col">
-                    <button type="button" class="loginBtn loginBtn--facebook">Login with Facebook</button>
-                    <button type="button" class="loginBtn loginBtn--google">Login with Google</button>
-                    <button type="button" class="loginBtn loginBtn--twitter">Login with Twitter</button>
-                </div>
-
-                <div class="signin-col">
-                    <div class="hide-md-lg">
-                        <p>Or sign in manually:</p>
-                    </div>
-
-                    <input type="text" name="username" placeholder="Username" required>
-                    <input type="password" name="password" placeholder="Password" required>
-                    <input type="submit" value="Login">
-                </div>
-            </div>
-        </form>
-
-        <div class="dialog-buttons">
-            <button class="btn btn-outline-dark mr-auto">Sign up</button>
-            <button class="btn btn-outline-dark ml-auto">Forgot password?</button>
-        </div>
+    <h2>Sign in</h2>
+    <div>
+        <a @onclick="@Exit" class="bigger" />
     </div>
+
 </div>
 
-<style>
-    * {
-        box-sizing: border-box;
-    }
+<form class="dialog-signin-body">
+    <div class="signin-row">
+        <div class="signin-vl">
+            <span class="signin-vl-innertext">or</span>
+        </div>
 
-    input,
-    .btn-signin {
-        width: 100%;
-        padding: 12px;
-        border: 1px thin black;
-        border-radius: 4px;
-        margin: 5px 0;
-        opacity: 0.85;
-        display: inline-block;
-        font-size: 17px;
-        line-height: 20px;
-        text-decoration: none;
-    }
+        <div class="signin-col">
+            <a href="user/signin?signInService=Facebook" class="loginBtn loginBtn--facebook">Login with Facebook</a>
+            <a href="user/signin?signInService=Google" class="loginBtn loginBtn--google">Login with Google</a>
+            <a href="user/signin?signInService=Twitter" class="loginBtn loginBtn--twitter">Login with Twitter</a>
+        </div>
 
-        input:hover,
-        .btn-signin:hover {
-            opacity: 1;
-        }
+        <div class="signin-col">
+            <div class="hide-md-lg">
+                <p>Or sign in manually:</p>
+            </div>
 
-        input[type=submit] {
-            background-color: #4CAF50;
-            border: 1px thin black;
-            border-radius: 4px;
-            color: white;
-            cursor: pointer;
-        }
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </div>
+    </div>
+</form>
 
-            input[type=submit]:hover {
-                background-color: #45a049;
-            }
-
-    .signin-col {
-        float: left;
-        width: 50%;
-        margin: auto;
-        padding: 0 50px;
-        margin-top: 6px;
-        flex: 25%;
-    }
-
-    .signin-row:after {
-        content: "";
-        display: table;
-        clear: both;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .signin-vl {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%);
-        border: 1px solid #ddd;
-        height: 185px;
-    }
-
-    .signin-vl-innertext {
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        background-color: white;
-        border: 1px solid #ccc;
-        border-radius: 20%;
-        padding: 8px 10px;
-    }
-
-    .hide-md-lg {
-        display: none;
-    }
-
-    @@media screen and (max-width: 650px) {
-        .signin-col {
-            width: 100%;
-            margin-top: 0;
-        }
-
-        .signin-row {
-            flex-direction: column;
-        }
-
-        .signin-vl {
-            display: none;
-        }
-
-        .hide-md-lg {
-            display: block;
-            text-align: center;
-        }
-    }
-</style>
+<div class="dialog-buttons">
+    <button class="btn btn-outline-dark mr-auto">Sign up</button>
+    <button class="btn btn-outline-dark ml-auto">Continue as Guest</button>
+</div>
 
 @code {
     [Parameter]
@@ -141,7 +43,4 @@
 
     [Parameter]
     public EventCallback Exit { get; set; }
-
-    [Parameter]
-    public UserInfo UserInfo { get; set; }
 }

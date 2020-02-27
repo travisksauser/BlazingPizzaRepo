@@ -20,10 +20,9 @@
     @Body
 </div>
 
-@if (OrderState.showSignIn)
-{
-    <SignInOptions Exit="OrderState.SignInExitConfigurePizzaDialog" Continue="OrderState.SignInContinueConfigurePizzaDialog" />
-}
+<TemplatedDialog Show="OrderState.showSignIn" Exit="OrderState.SignInExitConfigurePizzaDialog">
+    <SignInOptions Continue="OrderState.SignInContinueConfigurePizzaDialog" />
+</TemplatedDialog>
 
 @code
 {
