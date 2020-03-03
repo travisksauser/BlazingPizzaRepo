@@ -26,7 +26,7 @@ namespace BlazingPizza.Server
             services.AddMvc()
                 .AddNewtonsoftJson();
 
-            services.AddDbContext<PizzaStoreContext>(options => options.UseSqlite("Data Source=pizza.db"));
+            services.AddDbContextPool<PizzaStoreContext>(options => options.UseSqlite("Data Source=pizza.db"));
 
             services.AddResponseCompression(options =>
             {

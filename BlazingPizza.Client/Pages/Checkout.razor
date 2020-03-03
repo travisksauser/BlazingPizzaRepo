@@ -3,10 +3,11 @@
 @inject HttpClient HttpClient
 @inject NavigationManager NavigationManager
 @inject IJSRuntime JSRuntime
+@*@inject UserInfo UserInfo*@
 
 <div class="main">
     <AuthorizeView Context="authContext">
-        
+
         <NotAuthorized>
             <h2>Redirecting you...</h2>
         </NotAuthorized>
@@ -71,6 +72,7 @@
         isSubmitting = true;
         try
         {
+
             var newOrderId = await HttpClient.PostJsonAsync<int>("orders", OrderState.Order);
             OrderState.ResetOrder();
             NavigationManager.NavigateTo($"myorders/{newOrderId}");

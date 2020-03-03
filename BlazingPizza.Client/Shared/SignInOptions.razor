@@ -1,14 +1,12 @@
 ﻿
 <div class="dialog-title btn-close-cnt" @onclick="@Continue">
-
     <h2>Sign in</h2>
     <div>
-        <a @onclick="@Exit" class="bigger" />
+        <a class="signin-close" @onclick="@Exit" />
     </div>
-
 </div>
 
-<form class="dialog-signin-body">
+<form class="dialog-signin-body" @onclick="@Continue">
     <div class="signin-row">
         <div class="signin-vl">
             <span class="signin-vl-innertext">or</span>
@@ -24,23 +22,21 @@
             <div class="hide-md-lg">
                 <p>Or sign in manually:</p>
             </div>
-
-            <input type="text" name="username" placeholder="Username" required>
+            <input type="text" name="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Password" required>
             <input type="submit" value="Login">
         </div>
     </div>
 </form>
 
-<div class="dialog-buttons">
+<div class="dialog-buttons" @onclick="@Continue">
     <button class="btn btn-outline-dark mr-auto">Sign up</button>
-    <button class="btn btn-outline-dark ml-auto">Continue as Guest</button>
+    <a href="user/signin/guest" class="btn btn-outline-dark ml-auto">Continue as Guest</a>
 </div>
 
 @code {
-    [Parameter]
-    public EventCallback Continue { get; set; }
+    [Parameter] public EventCallback Continue { get; set; }
 
-    [Parameter]
-    public EventCallback Exit { get; set; }
+    [Parameter] public EventCallback Exit { get; set; }
+
 }

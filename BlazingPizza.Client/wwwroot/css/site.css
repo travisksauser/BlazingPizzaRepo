@@ -103,7 +103,7 @@ form {
     }
 
 .user-info {
-    margin-left: auto;
+    margin-left: 1em;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -129,14 +129,14 @@ form {
 
 .pizza-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 20rem);
+    grid-template-columns: repeat(auto-fill, 18rem);
     grid-gap: 2rem;
     justify-content: center;
     padding-left: 0;
 }
 
     .pizza-cards > li {
-        height: 10rem;
+        height: 8rem;
         position: relative;
         background-size: cover;
         border-radius: 0.5rem;
@@ -166,7 +166,7 @@ form {
 
     .pizza-info .title {
         color: white;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         display: block;
         margin: 0.2rem 0 0.4rem 0;
         font-family: 'Bahnschrift', Arial, Helvetica, sans-serif;
@@ -195,11 +195,127 @@ form {
 
 .sidebar {
     background-color: #2b2b2b;
-    width: 20rem;
+    max-width: 20rem;
     display: flex;
     flex-direction: column;
     color: white;
+    transition: all .5s ease-in-out;
 }
+
+    .sidebar.collapsed {
+        max-width: 0;
+        overflow: hidden;
+    }
+
+.container-collapse {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center;
+    margin-left: auto;
+    justify-content: center;
+    transition: all 0.2s ease-out;
+}
+
+    .container-collapse:hover .bar1 {
+        color: #fff2cc;
+        text-decoration: none;
+        background-color: #fff2cc;
+    }
+
+    .container-collapse:hover .bar2 {
+        color: #fff2cc;
+        text-decoration: none;
+        background-color: #fff2cc;
+    }
+
+    .container-collapse:hover .bar3 {
+        color: #fff2cc;
+        text-decoration: none;
+        background-color: #fff2cc;
+    }
+
+/*.container-collapse.active .bar1 {
+        background-color: rgba(255,255,255,0.2);
+        color: #fff2cc;
+    }
+    .container-collapse.active .bar2 {
+        background-color: rgba(255,255,255,0.2);
+        color: #fff2cc;
+    }
+    .container-collapse.active .bar3 {
+        background-color: rgba(255,255,255,0.2);
+        color: #fff2cc;
+    }
+
+        .container-collapse.active:after .bar1 {
+            content: "";
+            position: absolute;
+            bottom: -1rem;
+            z-index: 1;
+            width: 0px;
+            height: 0px;
+            border-left: 0.6rem solid transparent;
+            border-right: 0.6rem solid transparent;
+            border-top: 1rem solid rgb(205,51,51);
+        }
+        .container-collapse.active:after .bar2 {
+            content: "";
+            position: absolute;
+            bottom: -1rem;
+            z-index: 1;
+            width: 0px;
+            height: 0px;
+            border-left: 0.6rem solid transparent;
+            border-right: 0.6rem solid transparent;
+            border-top: 1rem solid rgb(205,51,51);
+        }
+        .container-collapse.active:after .bar3 {
+            content: "";
+            position: absolute;
+            bottom: -1rem;
+            z-index: 1;
+            width: 0px;
+            height: 0px;
+            border-left: 0.6rem solid transparent;
+            border-right: 0.6rem solid transparent;
+            border-top: 1rem solid rgb(205,51,51);
+        }*/
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+/*.bar1, bar2, bar3:hover {
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255,255,255,0.3);
+}
+    .bar1.active {
+        background-color: rgba(255,255,255,0.2);
+        color: #fff2cc;
+    }
+.bar2:hover {
+color: white;
+text-decoration: none;
+background-color: rgba(255,255,255,0.3);
+}
+    .bar2.active {
+        background-color: rgba(255,255,255,0.2);
+        color: #fff2cc;
+    }
+.bar3:hover {
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255,255,255,0.3);
+}
+    .bar3.active {
+        background-color: rgba(255,255,255,0.2);
+        color: #fff2cc;
+    }*/
 
 .order-contents {
     overflow-y: auto;
@@ -776,7 +892,7 @@ input,
 a.sign-in {
     background: none;
     border: 1.5px solid white;
-    border-radius: 0.7em;
+    border-radius: 0;
     color: white;
     text-transform: uppercase;
     padding: 0.2rem 0.8rem 0.1rem 0.8rem;

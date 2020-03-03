@@ -16,7 +16,7 @@
 </div>
 
 <div class="form-field">
-    <label>Line 2:</label>
+    <label>Address Line 2:</label>
     <div>
         <InputText @bind-Value="Address.Line2" />
         <ValidationMessage For="@(() => Address.Line2)" />
@@ -32,18 +32,10 @@
 </div>
 
 <div class="form-field">
-    <label>Region:</label>
+    <label>Zip code:</label>
     <div>
-        <InputText @bind-Value="Address.Region" />
-        <ValidationMessage For="@(() => Address.Region)" />
-    </div>
-</div>
-
-<div class="form-field">
-    <label>Postal code:</label>
-    <div>
-        <InputText @bind-Value="Address.PostalCode" />
-        <ValidationMessage For="@(() => Address.PostalCode)" />
+        <InputText @bind-Value="Address.ZipCode" />
+        <ValidationMessage For="@(() => Address.ZipCode)" />
     </div>
 </div>
 

@@ -5,49 +5,51 @@
 @inject IJSRuntime JS
 @*@implements IDisposable*@
 
-<div class="main">
-    <ul class="pizza-cards">
-        @if (specials != null)
-        {
-            @foreach (var special in specials)
+    <div class="main">
+        <ul class="pizza-cards">
+            @if (specials != null)
             {
-                <li @onclick="@(() => OrderState.ShowConfigurePizzaDialog(special))" style="background-image: url('@special.ImageUrl')">
-                    <div class="pizza-info">
-                        <span class="title">@special.Name</span>
-                        @special.Description
-                        <span class="price">@special.GetFormattedBasePrice()</span>
-                    </div>
-                </li>
+                @foreach (var special in specials)
+                {
+                    <li @onclick="@(() => OrderState.ShowConfigurePizzaDialog(special))" style="background-image: url('@special.ImageUrl')">
+                        <div class="pizza-info" style="font-size:90%">
+                            <span class="title">@special.Name</span>
+                            @special.Description
+                            <span class="price">@special.GetFormattedBasePrice()</span>
+                        </div>
+                    </li>
+                }
             }
-        }
-    </ul>
-</div>
-
-<div class="sidebar">
-    @if (OrderState.Order.Pizzas.Any())
-    {
-        <div class="order-contents">
-            <h2>Your order</h2>
-
-            @foreach (var configuredPizza in OrderState.Order.Pizzas)
-            {
-                <ConfiguredPizzaItem Pizza="configuredPizza" OnRemoved="@(() => RemovePizza(configuredPizza))" />
-            }
-        </div>
-    }
-    else
-    {
-        <div class="empty-cart">Choose a pizza<br>to get started</div>
-    }
-
-    <div class="order-total @(OrderState.Order.Pizzas.Any() ? "" : "hidden")">
-        Total:
-        <span class="total-price">@OrderState.Order.GetFormattedTotalPrice()</span>
-        <a href="checkout" class="btn btn-warning" disabled="@(OrderState.Order.Pizzas.Count == 0)">
-            Order >
-        </a>
+        </ul>       
     </div>
-</div>
+
+    <div class="sidebar @(OrderState.Order.Pizzas.Any() ? "" : "collapsed")">
+        @if (OrderState.Order.Pizzas.Any())
+        {
+            Console.WriteLine(OrderState.Order.Pizzas.Count());
+            <div class="order-contents">
+                <h2>Your order</h2>
+
+                @foreach (var configuredPizza in OrderState.Order.Pizzas)
+                {
+                    <ConfiguredPizzaItem Pizza="configuredPizza" OnRemoved="@(() => RemovePizza(configuredPizza))" />
+                }
+            </div>
+        }
+        else
+        {
+            <div class="empty-cart">Choose a pizza<br>to get started</div>
+        }
+
+        <div class="order-total @(OrderState.Order.Pizzas.Any() ? "" : "hidden")">
+            Total:
+            <span class="total-price">@OrderState.Order.GetFormattedTotalPrice()</span>
+            <a href="checkout" class="btn btn-warning" disabled="@(OrderState.Order.Pizzas.Count == 0)">
+                Order >
+            </a>
+        </div>
+    </div>
+
 
 
 <TemplatedDialog Show="OrderState.showingConfigureDialog" Exit="OrderState.ExitConfigurePizzaDialog">

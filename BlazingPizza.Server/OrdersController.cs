@@ -76,7 +76,6 @@ namespace BlazingPizza.Server
                     topping.Topping = null;
                 }
             }
-
             _db.Orders.Attach(order);
             await _db.SaveChangesAsync();
 
@@ -92,7 +91,7 @@ namespace BlazingPizza.Server
 
         private string GetUserId()
         {
-            // This will be the user's twitter username
+            // This will be the user's username
             return HttpContext.User.FindFirst("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name")?.Value;
         }
 

@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
 using System.Linq;
+using System.Security.Claims;
+using System.Collections.Generic;
 
 namespace BlazingPizza.Server
 {
@@ -26,20 +28,35 @@ namespace BlazingPizza.Server
         [HttpGet("user/signin")]
         public async Task SignIn(string redirectUri, string signInService)
         {
-            string[] serviceNames = { "Facebook", "Google", "Twitter" };
+            string[] serviceNames = { "Facebook", "Google", "Twitter"};
 
+            // set redirect after login
             if (string.IsNullOrEmpty(redirectUri) || !Url.IsLocalUrl(redirectUri))
             {
                 redirectUri = "/";
             }
             
-            if (signInService == null || !serviceNames.Any(i => i.Equals(signInService)))
+            // if the service isnt in servicenames its either null or something else, redirect to google as default
+            if (!serviceNames.Any(i => i.Equals(signInService)))
             {
-                signInService = "Twitter";
+                signInService = "Google";
             }
 
             await HttpContext.ChallengeAsync(signInService,
-                            new AuthenticationProperties { RedirectUri = redirectUri });
+                        new AuthenticationProperties { RedirectUri = redirectUri });                     
+        }
+
+        [HttpGet("user/signin/guest")]
+        public async Task<IActionResult> SignInGuest()
+        {
+            var claimsIdentity = new ClaimsIdentity(new[]
+            { new Claim(ClaimTypes.Name, "Guest") }, CookieAuthenticationDefaults.AuthenticationScheme);
+
+            //UserInfo GuestUser = new UserInfo { Name = "Guest" };
+
+            await HttpContext.SignInAsync(new ClaimsPrincipal(claimsIdentity),
+                    new AuthenticationProperties {});
+            return Redirect("~/");
         }
 
         [HttpGet("user/signout")]

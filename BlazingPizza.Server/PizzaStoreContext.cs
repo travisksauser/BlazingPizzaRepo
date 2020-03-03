@@ -4,9 +4,10 @@ namespace BlazingPizza.Server
 {
     public class PizzaStoreContext : DbContext
     {
-        public PizzaStoreContext()
-        {
-        }
+        //dbcontext pooling vs dbcontext in startup
+        //public PizzaStoreContext()
+        //{
+        //}
 
         public PizzaStoreContext(DbContextOptions options)
             : base(options)

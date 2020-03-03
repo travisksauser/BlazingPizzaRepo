@@ -13,9 +13,7 @@ namespace BlazingPizza
         public string Line2 { get; set; }
         [Required(ErrorMessage = "One pizza to Nowhere-Town comin right up"), MaxLength(50)]
         public string City { get; set; }
-        [MaxLength(20)]
-        public string Region { get; set; }
-        [Required(ErrorMessage = "Just give a Postal Code atleast come on"), MaxLength(20)]
-        public string PostalCode { get; set; }
+        [Required(ErrorMessage = "Just give a Zip Code atleast come on"), MaxLength(20)]
+        public string ZipCode { get; set; }
     }
 }

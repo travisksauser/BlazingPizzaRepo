@@ -1,7 +1,6 @@
 C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingComponents\bin\Debug\netstandard2.0\BlazingComponents.deps.json
 C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingComponents\bin\Debug\netstandard2.0\BlazingComponents.dll
 C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingComponents\bin\Debug\netstandard2.0\BlazingComponents.pdb
-C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingComponents\obj\Debug\netstandard2.0\BlazingComponents.csprojAssemblyReference.cache
 C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingComponents\obj\Debug\netstandard2.0\staticwebassets\BlazingComponents.StaticWebAssets.Manifest.cache
 C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingComponents\obj\Debug\netstandard2.0\staticwebassets\BlazingComponents.StaticWebAssets.xml
 C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingComponents\obj\Debug\netstandard2.0\BlazingComponents.csproj.CoreCompileInputs.cache
@@ -23,3 +22,4 @@ C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingComponents\obj\Deb
 C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingComponents\obj\Debug\netstandard2.0\BlazingComponents.pdb
 C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingComponents\obj\Debug\netstandard2.0\RazorDeclaration\TemplatedList.razor.g.cs
 C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingComponents\obj\Debug\netstandard2.0\Razor\TemplatedList.razor.g.cs
+C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingComponents\obj\Debug\netstandard2.0\BlazingComponents.csprojAssemblyReference.cache

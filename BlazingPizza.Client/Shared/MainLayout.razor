@@ -1,27 +1,33 @@
 ﻿@inherits LayoutComponentBase
 @inject OrderState OrderState
 
-<div class="top-bar">
-    <img class="logo" src="img/logo.svg" />
+    <div class="top-bar">
+        <img class="logo" src="img/logo.svg" />
 
-    <NavLink href="" class="nav-tab" Match="NavLinkMatch.All">
-        <img src="img/pizza-slice.svg" />
-        <div>Get Pizza</div>
-    </NavLink>
-    <NavLink href="myorders" class="nav-tab">
-        <img src="img/bike.svg" />
-        <div>My Orders</div>
-    </NavLink>
+        <NavLink href="" class="nav-tab" Match="NavLinkMatch.All">
+            <img src="img/pizza-slice.svg" />
+            <div>Get Pizza</div>
+        </NavLink>
+        <NavLink href="myorders" class="nav-tab">
+            <img src="img/bike.svg" />
+            <div>My Orders</div>
+        </NavLink>       
 
-    <LoginDisplay OnClick="OrderState.ShowSignInOptions" />
-</div>
+        <div class="container-collapse" onclick="document.getElementsByClassName('sidebar')[0].classList.toggle('collapsed')">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+            <LoginDisplay OnClick="OrderState.ShowSignInOptions" />
+        </div>
 
 <div class="content">
     @Body
 </div>
 
 <TemplatedDialog Show="OrderState.showSignIn" Exit="OrderState.SignInExitConfigurePizzaDialog">
-    <SignInOptions Continue="OrderState.SignInContinueConfigurePizzaDialog" />
+    <SignInOptions Continue="OrderState.SignInContinueConfigurePizzaDialog" Exit="OrderState.SignInExitConfigurePizzaDialog"/>
 </TemplatedDialog>
 
 @code
