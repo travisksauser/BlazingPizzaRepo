@@ -435,6 +435,28 @@ background-color: rgba(255,255,255,0.3);
         background-color: rgba(255,255,255,0.1);
     }
 
+.delete-sign {
+    display: flex;
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*right: 0;*/
+    content: 'X';
+    cursor: pointer;
+    color: #fff2cc;
+    width: 2rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+    .delete-sign:hover {
+        /*flex-basis: 5rem;*/
+        justify-content: center;
+        text-decoration: none;
+        color: #fff2cc;
+        background-color: rgba(255,255,255,0.1);
+    }
+
 .configured-pizza-item {
     display: flex;
     flex-direction: row;
@@ -797,6 +819,10 @@ input,
 
 .btn-close-cnt {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-top: 0px;
+    padding-right: 0px;
 }
 
     .btn-close-cnt h2 {
