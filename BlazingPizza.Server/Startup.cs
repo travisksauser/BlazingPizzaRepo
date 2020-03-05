@@ -22,7 +22,8 @@ namespace BlazingPizza.Server
         public IConfiguration Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services)
-        {
+        {           
+
             services.AddMvc()
                 .AddNewtonsoftJson();
 
@@ -33,7 +34,6 @@ namespace BlazingPizza.Server
                 options.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(
                     new[] { MediaTypeNames.Application.Octet });
             });
-
 
 
             services

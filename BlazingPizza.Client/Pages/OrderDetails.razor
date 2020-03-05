@@ -5,11 +5,17 @@
 @attribute [Authorize]
 
 
+
 <div class="main">
     @if (invalidOrder)
     {
         <h2>Nope</h2>
         <p>Sorry, this order could not be loaded.</p>
+        @if(Order.OrderId == 0)
+        {
+            <h1>Address was invalid, try again!</h1>
+            <a class="btn btn-outline-danger" href="/checkout">Checkout</a>
+        }
     }
     else if (orderWithStatus == null)
     {
@@ -32,7 +38,7 @@
                     <OrderReview Order="@orderWithStatus.Order" />
                 </div>
                 <div class="track-order-map">
-                    <Map Zoom="13" Markers="orderWithStatus.MapMarkers" />
+                    <Map Zoom="12" Markers="orderWithStatus.MapMarkers" />
                 </div>
             </div>
         </div>
@@ -73,8 +79,6 @@
             }
 
             StateHasChanged();
-
-            await Task.Delay(4000);
         }
     }
 

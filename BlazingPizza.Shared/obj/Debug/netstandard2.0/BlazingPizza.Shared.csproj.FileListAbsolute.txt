@@ -16,9 +16,9 @@ C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.Shared\bin\D
 C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.Shared\bin\Debug\netstandard2.0\BlazingPizza.ComponentsLibrary.dll
 C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.Shared\bin\Debug\netstandard2.0\BlazingPizza.ComponentsLibrary.pdb
 C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.Shared\obj\Debug\netstandard2.0\BlazingPizza.Shared.csprojAssemblyReference.cache
-C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.Shared\obj\Debug\netstandard2.0\BlazingPizza.Shared.csproj.CoreCompileInputs.cache
 C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.Shared\obj\Debug\netstandard2.0\BlazingPizza.Shared.AssemblyInfoInputs.cache
 C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.Shared\obj\Debug\netstandard2.0\BlazingPizza.Shared.AssemblyInfo.cs
 C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.Shared\obj\Debug\netstandard2.0\BlazingPizza.Shared.csproj.CopyComplete
 C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.Shared\obj\Debug\netstandard2.0\BlazingPizza.Shared.dll
 C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.Shared\obj\Debug\netstandard2.0\BlazingPizza.Shared.pdb
+C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.Shared\obj\Debug\netstandard2.0\BlazingPizza.Shared.csproj.CoreCompileInputs.cache

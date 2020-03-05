@@ -1,4 +1,15 @@
-﻿namespace BlazingPizza
+﻿using Newtonsoft.Json.Linq;
+using System.Data;
+using System.IO;
+using System.Net;
+using System.Text;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+using System;
+using System.Net.Http;
+using System.Runtime.CompilerServices;
+
+namespace BlazingPizza
 {
     public class LatLong
     {
@@ -22,6 +33,16 @@
             return new LatLong(
                 start.Latitude + (end.Latitude - start.Latitude) * proportion,
                 start.Longitude + (end.Longitude - start.Longitude) * proportion);
+        }
+
+        public static async Task<LatLong> GetdtLatLongAsync(string url)
+        {
+            HttpClient httpClient = new HttpClient();
+            string json = await httpClient.GetStringAsync(url);
+            dynamic latlons = JsonConvert.DeserializeObject(json);
+            dynamic latlon = latlons[0];
+            httpClient.Dispose();
+            return new LatLong(Convert.ToDouble(latlon.lat), Convert.ToDouble(latlon.lon));
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
@@ -7,6 +8,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebPush;
+using System.Net;
+using Newtonsoft.Json.Linq;
 
 namespace BlazingPizza.Server
 {
@@ -59,7 +62,29 @@ namespace BlazingPizza.Server
         public async Task<ActionResult<int>> PlaceOrder(Order order)
         {
             order.CreatedTime = DateTime.Now;
-            order.DeliveryLocation = new LatLong(51.5001, -0.1239);
+
+            string userAddress = order.DeliveryAddress.City + "%20" + order.DeliveryAddress.ZipCode + "%20" + order.DeliveryAddress.Line1;
+
+            try
+            {
+                order.DeliveryLocation = await LatLong.GetdtLatLongAsync("https://us1.locationiq.com/v1/search.php?key=f467d4e12ae98b&q=" + userAddress + "&format=json");
+            }
+            catch (ArgumentNullException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return order.OrderId;
+            }
+            catch (WebException ex)
+            {
+                Console.WriteLine(ex.Message);
+                return order.OrderId;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return order.OrderId;
+            }
+            
             order.UserId = GetUserId();
 
             // Enforce existence of Pizza.SpecialId and Topping.ToppingId

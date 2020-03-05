@@ -68,6 +68,8 @@ form {
     position: relative;
     text-transform: uppercase;
     transition: 0.2s ease-out;
+    margin-right: -1px;
+    margin-left: -1px;
 }
 
     .nav-tab:hover {
@@ -437,12 +439,10 @@ background-color: rgba(255,255,255,0.3);
 
 .delete-sign {
     display: flex;
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*right: 0;*/
     content: 'X';
+    font-size: larger;
     cursor: pointer;
-    color: #fff2cc;
+    color: #fff;
     width: 2rem;
     height: 2rem;
     align-items: center;
@@ -450,7 +450,6 @@ background-color: rgba(255,255,255,0.3);
 }
 
     .delete-sign:hover {
-        /*flex-basis: 5rem;*/
         justify-content: center;
         text-decoration: none;
         color: #fff2cc;
@@ -512,15 +511,33 @@ background-color: rgba(255,255,255,0.3);
     background-color: #444;
     color: #fff2cc;
     padding: 1.3rem 2rem;
+    display: flex;
+    padding-right: 0;
+    flex-direction: row;
+    padding-top: 0;
+    justify-content: flex-end;
 }
 
     .dialog-title h2 {
         color: white;
-        font-size: 1.4rem;
+        font-size: 1.9rem;
         margin: 0;
         font-family: 'Bahnschrift', Arial, Helvetica, sans-serif;
         text-transform: uppercase;
+        line-height: 2.8rem;
+        flex: 1;
+        padding-top: 1.1rem;
+        padding-right: 0rem;
+    }
+
+    .dialog-title h8 {
+        color: #fff2cc;
+        font-size: 0.9rem;
+        margin: 0;
         line-height: 1.3rem;
+        flex: 1;
+        padding-right: 1.4rem;
+        padding-top: 2rem;
     }
 
 .dialog-body {
@@ -827,6 +844,7 @@ input,
 
     .btn-close-cnt h2 {
         flex: 1;
+        padding-top: 1rem;
     }
 
 .delete-topping {

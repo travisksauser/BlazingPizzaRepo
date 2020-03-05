@@ -20,7 +20,6 @@ C:\dev\blazor-workshop-master\save-points\00-Starting-point\BlazingPizza.Compone
 C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.ComponentsLibrary\bin\Debug\netstandard2.0\BlazingPizza.ComponentsLibrary.deps.json
 C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.ComponentsLibrary\bin\Debug\netstandard2.0\BlazingPizza.ComponentsLibrary.dll
 C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.ComponentsLibrary\bin\Debug\netstandard2.0\BlazingPizza.ComponentsLibrary.pdb
-C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.ComponentsLibrary\obj\Debug\netstandard2.0\BlazingPizza.ComponentsLibrary.csprojAssemblyReference.cache
 C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.ComponentsLibrary\obj\Debug\netstandard2.0\staticwebassets\BlazingPizza.ComponentsLibrary.StaticWebAssets.Manifest.cache
 C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.ComponentsLibrary\obj\Debug\netstandard2.0\staticwebassets\BlazingPizza.ComponentsLibrary.StaticWebAssets.xml
 C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.ComponentsLibrary\obj\Debug\netstandard2.0\BlazingPizza.ComponentsLibrary.csproj.CoreCompileInputs.cache

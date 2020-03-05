@@ -3,7 +3,10 @@
 
 <div class="dialog-title" @onclick="@Continue">
     <h2>@Pizza.Special.Name</h2>
-    @Pizza.Special.Description
+    <h8>@Pizza.Special.Description</h8>
+    <div>
+        <a @onclick="@Exit" class="delete-sign">x</a>
+    </div>
 </div>
 
 <form class="dialog-body" @onclick="@Continue">
@@ -69,6 +72,9 @@
 
     [Parameter]
     public EventCallback Continue { get; set; }
+    
+    [Parameter]
+    public EventCallback Exit { get; set; }
 
     List<Topping> toppings;
 
