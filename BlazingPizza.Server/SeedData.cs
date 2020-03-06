@@ -183,6 +183,38 @@
                     BasePrice = 9.99m,
                     ImageUrl = "img/pizzas/margherita.jpg",
                 },
+                new PizzaSpecial()
+                {
+                    Id = 9,
+                    Name = "Everything and then some",
+                    Description = "Pizza with nothing held back, everything's on this one",
+                    BasePrice = 12.50m,
+                    ImageUrl = "img/pizzas/everything.jpg",
+                },
+                new PizzaSpecial()
+                {
+                    Id = 10,
+                    Name = "Deep Dish",
+                    Description = "Deeper than the marinara trench, get it?",
+                    BasePrice = 11.75m,
+                    ImageUrl = "img/pizzas/deepdish.png",
+                },
+                new PizzaSpecial()
+                {
+                    Id = 11,
+                    Name = "But why?",
+                    Description = "No seriously why?",
+                    BasePrice = 10.75m,
+                    ImageUrl = "img/pizzas/why.jpg",
+                },
+                new PizzaSpecial()
+                {
+                    Id = 12,
+                    Name = "Hawaiian",
+                    Description = "You either love it or absolutely despise the idea of it, no inbetween",
+                    BasePrice = 10.25m,
+                    ImageUrl = "img/pizzas/hawaiian.jpg",
+                },
             };
 
             db.Toppings.AddRange(toppings);
