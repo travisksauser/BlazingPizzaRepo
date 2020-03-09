@@ -194,7 +194,7 @@
                 new PizzaSpecial()
                 {
                     Id = 10,
-                    Name = "Deep Dish",
+                    Name = "Deep dish",
                     Description = "Deeper than the marinara trench, get it?",
                     BasePrice = 11.75m,
                     ImageUrl = "img/pizzas/deepdish.png",
@@ -211,7 +211,7 @@
                 {
                     Id = 12,
                     Name = "Hawaiian",
-                    Description = "You either love it or absolutely despise the idea of it, no inbetween",
+                    Description = "You either love it or absolutely despise the idea of it",
                     BasePrice = 10.25m,
                     ImageUrl = "img/pizzas/hawaiian.jpg",
                 },

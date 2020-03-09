@@ -3,7 +3,6 @@
 @inject HttpClient HttpClient
 @inject NavigationManager NavigationManager
 @inject IJSRuntime JSRuntime
-@*@inject UserInfo UserInfo*@
 
 <div class="main">
     <AuthorizeView Context="authContext">
@@ -93,7 +92,7 @@
                 OrderState.ResetOrder();
                 NavigationManager.NavigateTo($"myorders/{newOrderId}");
             }
-            else;
+            else
             {
                 invalidAddress = true;
             }

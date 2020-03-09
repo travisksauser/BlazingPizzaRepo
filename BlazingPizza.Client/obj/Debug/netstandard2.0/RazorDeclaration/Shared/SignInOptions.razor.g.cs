@@ -58,17 +58,17 @@ using BlazingPizza.Client.Shared;
 
 #line default
 #line hidden
-#line 11 "C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.Client\_Imports.razor"
+#line 10 "C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.Client\_Imports.razor"
 using BlazingPizza.ComponentsLibrary;
 
 #line default
 #line hidden
-#line 12 "C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.Client\_Imports.razor"
+#line 11 "C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.Client\_Imports.razor"
 using BlazingPizza.ComponentsLibrary.Map;
 
 #line default
 #line hidden
-#line 13 "C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.Client\_Imports.razor"
+#line 12 "C:\dev\blazor-workshop-master\save-points\BlazingPizza\BlazingPizza.Client\_Imports.razor"
 using BlazingComponents;
 
 #line default
